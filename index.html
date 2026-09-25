@@ -1,0 +1,1698 @@
+```html
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Campusly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <section class="auth-screen" id="authScreen">
+    <div class="auth-visual">
+      <div class="auth-glow glow-one"></div>
+      <div class="auth-glow glow-two"></div>
+
+      <div class="auth-brand">
+        <img src="images/logo.png" alt="Campusly">
+      </div>
+
+      <div class="auth-copy">
+        <p class="eyebrow">YOUR CAMPUS. YOUR COMMUNITY.</p>
+
+        <h1>
+          Connect with the people<br>
+          who make campus feel like home.
+        </h1>
+
+        <p class="auth-sub">
+          Share ideas, discover clubs, find events, and stay connected with your student community.
+        </p>
+
+        <div class="auth-pills">
+          <span>✦ Student community</span>
+          <span>◈ Clubs & events</span>
+          <span>♡ Built for campus</span>
+        </div>
+      </div>
+
+      <div class="auth-orbit orbit-one"></div>
+      <div class="auth-orbit orbit-two"></div>
+    </div>
+
+
+    <div class="auth-panel">
+
+      <div class="auth-card" id="loginCard">
+
+        <div class="mobile-brand">
+          <img src="images/logo.png" alt="Campusly">
+        </div>
+
+        <div class="auth-heading">
+
+          <img
+            class="auth-icon-img"
+            src="images/logo.png"
+            alt="Campusly"
+          >
+
+          <div>
+            <h2>Welcome back</h2>
+            <p>Sign in to continue to your campus.</p>
+          </div>
+
+        </div>
+
+        <form id="loginForm">
+
+          <label>
+            Email address
+            <input
+              id="loginEmail"
+              type="email"
+              placeholder="you@college.edu"
+              required
+            >
+          </label>
+
+          <label>
+            Password
+
+            <div class="password-wrap">
+
+              <input
+                id="loginPassword"
+                type="password"
+                placeholder="Enter your password"
+                required
+              >
+
+              <button
+                type="button"
+                class="show-pass"
+                data-target="loginPassword"
+              >
+                Show
+              </button>
+
+            </div>
+
+          </label>
+
+          <div class="form-row">
+
+            <label class="check">
+              <input id="remember" type="checkbox">
+              <span>Remember me</span>
+            </label>
+
+            <button
+              type="button"
+              class="text-btn"
+              id="forgotBtn"
+            >
+              Forgot password?
+            </button>
+
+          </div>
+
+          <p class="form-error" id="loginError"></p>
+
+          <button
+            class="auth-btn"
+            type="submit"
+          >
+            Sign In <span>→</span>
+          </button>
+
+        </form>
+
+        <div class="divider">
+          <span>or</span>
+        </div>
+
+        <button
+          class="demo-btn"
+          id="demoBtn"
+        >
+          Continue with Demo Account
+        </button>
+
+        <p class="switch-copy">
+          New to Campusly?
+
+          <button
+            class="text-btn"
+            id="showRegister"
+          >
+            Create an account
+          </button>
+        </p>
+
+      </div>
+
+
+      <div class="auth-card hidden" id="registerCard">
+
+        <div class="mobile-brand">
+          <img src="images/logo.png" alt="Campusly">
+        </div>
+
+        <div class="auth-heading">
+
+          <img
+            class="auth-icon-img"
+            src="images/logo.png"
+            alt="Campusly"
+          >
+
+          <div>
+            <h2>Create your account</h2>
+            <p>Join your campus community in a few seconds.</p>
+          </div>
+
+        </div>
+
+
+        <form id="registerForm">
+
+          <div class="two-inputs">
+
+            <label>
+              Full name
+
+              <input
+                id="regName"
+                type="text"
+                placeholder="Bandile Dlamini"
+                required
+              >
+
+            </label>
+
+            <label>
+              Course
+
+              <input
+                id="regCourse"
+                type="text"
+                placeholder="Computer Science"
+                required
+              >
+
+            </label>
+
+          </div>
+
+
+          <label>
+            College email
+
+            <input
+              id="regEmail"
+              type="email"
+              placeholder="you@college.edu"
+              required
+            >
+
+          </label>
+
+
+          <label>
+            Password
+
+            <div class="password-wrap">
+
+              <input
+                id="regPassword"
+                type="password"
+                placeholder="At least 6 characters"
+                required
+              >
+
+              <button
+                type="button"
+                class="show-pass"
+                data-target="regPassword"
+              >
+                Show
+              </button>
+
+            </div>
+
+          </label>
+
+
+          <label>
+            Confirm password
+
+            <input
+              id="regConfirm"
+              type="password"
+              placeholder="Repeat your password"
+              required
+            >
+
+          </label>
+
+
+          <label class="check terms">
+
+            <input
+              id="terms"
+              type="checkbox"
+              required
+            >
+
+            <span>
+              I agree to the Campusly terms and community guidelines.
+            </span>
+
+          </label>
+
+
+          <p
+            class="form-error"
+            id="registerError"
+          ></p>
+
+
+          <button
+            class="auth-btn"
+            type="submit"
+          >
+            Create Account
+            <span>→</span>
+          </button>
+
+        </form>
+
+
+        <p class="switch-copy">
+
+          Already have an account?
+
+          <button
+            class="text-btn"
+            id="showLogin"
+            type="button"
+          >
+            Sign in
+          </button>
+
+        </p>
+
+        <p class="auth-note">
+          Demo project • Account data is stored locally in your browser.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <header class="top">
+
+    <div class="brand">
+      <img src="images/logo.png" alt="Campusly">
+    </div>
+
+    <div class="search">
+      ⌕
+      <input
+        id="search"
+        placeholder="Search for posts, people, clubs, events..."
+      >
+      <kbd>⌘K</kbd>
+    </div>
+
+    <div class="actions">
+
+      <button class="top-action notification-trigger" id="notificationBtn" type="button" aria-label="Notifications">
+        <i class="fa-regular fa-bell"></i>
+        <span class="notification-badge" id="notificationBadge">3</span>
+      </button>
+      <button class="top-action" id="quickProfileBtn" type="button" aria-label="Open profile">
+        <i class="fa-regular fa-user"></i>
+      </button>
+
+      <div class="user">
+
+        <span class="avatar me">B</span>
+
+        Bandile
+
+        <button
+          id="logoutBtn"
+          type="button"
+        >
+          Logout
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <div class="layout">
+
+    <aside class="left">
+
+      <nav>
+
+        <button class="nav active">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </button>
+
+        <button class="nav">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Explore</span>
+        </button>
+
+        <button class="nav">
+          <i class="fa-regular fa-calendar"></i>
+          <span>Events</span>
+        </button>
+
+        <button class="nav">
+          <i class="fa-solid fa-user-group"></i>
+          <span>Clubs</span>
+        </button>
+
+        <button class="nav" id="messagesNav">
+          <i class="fa-regular fa-message"></i>
+          <span>Messages</span>
+          <b class="nav-badge" id="messageBadge">3</b>
+        </button>
+
+        <button class="nav">
+          <i class="fa-regular fa-bookmark"></i>
+          <span>Saved</span>
+        </button>
+
+        <button class="nav" id="profileNav">
+          <i class="fa-regular fa-user"></i>
+          <span>Profile</span>
+        </button>
+
+      </nav>
+
+
+      <div class="promo">
+
+        <h2>
+          Good students<br>
+          build great<br>
+          communities.
+        </h2>
+
+        <p>Connect. Share. Belong.</p>
+
+        <button id="focusPost">
+          Create a Post　›
+        </button>
+
+      </div>
+
+      <small class="foot">
+        Campusly © 2025<br>
+        Made for Students. By Students.
+      </small>
+
+    </aside>
+
+
+    <main class="feed">
+
+      <section class="composer">
+
+        <span class="avatar me">B</span>
+
+        <div class="compose">
+
+          <input
+            id="postInput"
+            placeholder="What's on your mind, Bandile?"
+          >
+
+          <input
+            type="file"
+            id="photoInput"
+            accept="image/*"
+            hidden
+          >
+
+          <div class="compose-row">
+
+            <button
+              type="button"
+              id="photoBtn"
+              class="composer-action photo-action"
+            >
+              <i class="fa-regular fa-image"></i>
+              <span>Photo</span>
+            </button>
+
+
+            <button
+              type="button"
+              id="pollBtn"
+              class="composer-action poll-action"
+            >
+              <i class="fa-solid fa-chart-simple"></i>
+              <span>Poll</span>
+            </button>
+
+
+            <button
+              type="button"
+              id="eventBtn"
+              class="composer-action event-action"
+            >
+              <i class="fa-regular fa-calendar"></i>
+              <span>Event</span>
+            </button>
+
+
+            <button
+              type="button"
+              id="feelingBtn"
+              class="composer-action feeling-action"
+            >
+              <i class="fa-regular fa-face-smile"></i>
+              <span>Feeling</span>
+            </button>
+
+
+            <button
+              class="postbtn"
+              id="postBtn"
+              type="button"
+            >
+              Post
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <div class="tabs">
+
+        <div>
+
+          <button class="tab active">
+            For You
+          </button>
+
+          <button class="tab">
+            Latest
+          </button>
+
+          <button class="tab">
+            Following
+          </button>
+
+        </div>
+
+        <select id="filter">
+
+          <option>All Posts</option>
+          <option>Clubs</option>
+          <option>Academic</option>
+
+        </select>
+
+      </div>
+
+
+      <div id="posts">
+
+        <article
+          class="post"
+          data-cat="Clubs"
+        >
+
+          <div class="head">
+
+            <img
+              class="post-avatar profile-link"
+              data-profile="Alicia Nair"
+              src="images/alicia.png"
+              alt="Alicia"
+            >
+
+            <div>
+
+              <b class="profile-link" data-profile="Alicia Nair">Alicia Nair</b>
+
+              <small>
+                3h ago · Computer Science
+              </small>
+
+            </div>
+
+            <button class="more">
+              <i class="fa-solid fa-ellipsis"></i>
+            </button>
+
+          </div>
+
+
+          <p>
+            The coding club workshop today was actually fire! 🔥<br>
+            Learnt so much about web dev and met some really cool people.
+            <br><br>
+            Shoutout to everyone who came!
+          </p>
+
+
+          <div class="pics">
+
+            <div class="post-image image-one">
+
+              <span>
+                BUILD
+                <small>CREATE · BELONG</small>
+              </span>
+
+            </div>
+
+            <div class="post-image image-two">
+
+              <span>
+                Good Developers
+                <small>Better People</small>
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="post-actions">
+
+            <button class="like">
+
+              <i class="fa-solid fa-heart"></i>
+
+              <span>128</span>
+
+            </button>
+
+
+            <button class="comment">
+
+              <i class="fa-regular fa-comment"></i>
+
+              <span>12</span>
+
+            </button>
+
+
+            <button>
+
+              <i class="fa-solid fa-share"></i>
+
+              <span>Share</span>
+
+            </button>
+
+
+            <button class="save">
+
+              <i class="fa-regular fa-bookmark"></i>
+
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <article
+          class="post"
+          data-cat="Academic"
+        >
+
+          <div class="head">
+
+            <img
+              class="post-avatar rahul profile-link"
+              data-profile="Rahul Mehta"
+              src="images/rahul.png"
+              alt="Rahul"
+            >
+
+            <div>
+
+              <b class="profile-link" data-profile="Rahul Mehta">Rahul Mehta</b>
+
+              <small>
+                5h ago · Mechanical Engineering
+              </small>
+
+            </div>
+
+            <button class="more">
+              •••
+            </button>
+
+          </div>
+
+
+          <p>
+            Anyone know when the midsem results are supposed to be out?<br>
+            The portal still says “Processing” 😭
+          </p>
+
+
+          <div class="post-actions">
+
+            <button class="like">
+              ♥ <span>48</span>
+            </button>
+
+            <button class="comment">
+              ◯ <span>23</span>
+            </button>
+
+            <button>
+              ⌁ Share
+            </button>
+
+            <button class="save">
+              ♡
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </main>
+
+
+    <aside class="right">
+
+      <section class="panel">
+
+        <div class="title">
+
+          <h3>Upcoming Events</h3>
+
+          <a>See All</a>
+
+        </div>
+
+
+        <div class="event">
+
+          <img
+            class="event-img"
+            src="images/chess (4).png"
+            alt="Afro Fest"
+          >
+
+          <div>
+
+            <b>Afro Fest 2025</b>
+
+            <small>
+              ▣ Oct 18, 2025
+            </small>
+
+            <small>
+              ⌖ Main Auditorium
+            </small>
+
+          </div>
+
+          <span>›</span>
+
+        </div>
+
+
+        <div class="event">
+
+          <img
+            class="event-img"
+            src="images/chess (3).png"
+            alt="Soccer Cup"
+          >
+
+          <div>
+
+            <b>Inter-Dept Soccer</b>
+
+            <small>
+              ▣ Oct 22, 2025
+            </small>
+
+            <small>
+              ⌖ Sports Complex
+            </small>
+
+          </div>
+
+          <span>›</span>
+
+        </div>
+
+
+        <div class="event">
+
+          <img
+            class="event-img"
+            src="images/chess (2).png"
+            alt="Hack 2026"
+          >
+
+          <div>
+
+            <b>Campus Hackathon</b>
+
+            <small>
+              ▣ Oct 26, 2025
+            </small>
+
+            <small>
+              ⌖ Innovation Lab
+            </small>
+
+          </div>
+
+          <span>›</span>
+
+        </div>
+
+
+        <div class="event">
+
+          <img
+            class="event-img"
+            src="images/chess (1).png"
+            alt="Chess Open"
+          >
+
+          <div>
+
+            <b>Campus Chess Open</b>
+
+            <small>
+              ▣ Oct 30, 2025
+            </small>
+
+            <small>
+              ⌖ Student Centre
+            </small>
+
+          </div>
+
+          <span>›</span>
+
+        </div>
+
+      </section>
+
+
+      <section class="panel">
+
+        <div class="title">
+
+          <h3>Suggested Clubs</h3>
+
+          <a>See All</a>
+
+        </div>
+
+
+        <div class="club">
+
+          <i>‹/›</i>
+
+          <div>
+            <b>Coding Club</b>
+            <small>1.2K members</small>
+          </div>
+
+          <button class="join">
+            Join
+          </button>
+
+        </div>
+
+
+        <div class="club">
+
+          <i>◉</i>
+
+          <div>
+            <b>Photography Club</b>
+            <small>892 members</small>
+          </div>
+
+          <button class="join">
+            Join
+          </button>
+
+        </div>
+
+
+        <div class="club">
+
+          <i>♫</i>
+
+          <div>
+            <b>Music Club</b>
+            <small>640 members</small>
+          </div>
+
+          <button class="join">
+            Join
+          </button>
+
+        </div>
+
+
+        <div class="club">
+
+          <i>▢</i>
+
+          <div>
+            <b>Debate Society</b>
+            <small>478 members</small>
+          </div>
+
+          <button class="join">
+            Join
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <section class="panel">
+
+        <div class="title">
+
+          <h3>People You May Know</h3>
+
+          <a>See All</a>
+
+        </div>
+
+
+        <div class="person">
+
+          <span class="avatar">
+            S
+          </span>
+
+          <div>
+            <b class="profile-link" data-profile="Sneha Kapoor">Sneha Kapoor</b>
+            <small>2 mutual friends</small>
+          </div>
+
+          <button class="add" type="button">
+            Add
+          </button>
+          <button class="mini-message" type="button" data-message-person="Sneha Kapoor" aria-label="Message Sneha Kapoor">
+            <i class="fa-regular fa-message"></i>
+          </button>
+
+        </div>
+
+
+        <div class="person">
+
+          <span class="avatar">
+            A
+          </span>
+
+          <div>
+            <b class="profile-link" data-profile="Arjun Iyer">Arjun Iyer</b>
+            <small>3 mutual friends</small>
+          </div>
+
+          <button class="add" type="button">
+            Add
+          </button>
+          <button class="mini-message" type="button" data-message-person="Arjun Iyer" aria-label="Message Arjun Iyer">
+            <i class="fa-regular fa-message"></i>
+          </button>
+
+        </div>
+
+
+        <div class="person">
+
+          <span class="avatar">
+            K
+          </span>
+
+          <div>
+            <b class="profile-link" data-profile="Kavya Shah">Kavya Shah</b>
+            <small>1 mutual friend</small>
+          </div>
+
+          <button class="add" type="button">
+            Add
+          </button>
+          <button class="mini-message" type="button" data-message-person="Kavya Shah" aria-label="Message Kavya Shah">
+            <i class="fa-regular fa-message"></i>
+          </button>
+
+        </div>
+
+      </section>
+
+    </aside>
+
+  </div>
+
+
+  <!-- ================= EVENTS POPUP ================= -->
+
+  <div
+    id="eventsModal"
+    style="
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.55);
+      z-index:9999;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    "
+  >
+
+    <div
+      style="
+        width:min(650px,100%);
+        max-height:85vh;
+        overflow-y:auto;
+        background:white;
+        border-radius:20px;
+        padding:25px;
+        box-shadow:0 20px 60px rgba(0,0,0,0.25);
+      "
+    >
+
+      <div
+        style="
+          display:flex;
+          align-items:center;
+          justify-content:space-between;
+          margin-bottom:20px;
+        "
+      >
+
+        <div>
+
+          <h2 style="margin:0;">
+            Campus Events
+          </h2>
+
+          <p style="margin:5px 0 0; color:#667085;">
+            Discover what's happening around campus.
+          </p>
+
+        </div>
+
+
+        <button
+          id="closeEvents"
+          type="button"
+          style="
+            border:none;
+            background:none;
+            font-size:25px;
+            cursor:pointer;
+          "
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <!-- AFRO FEST -->
+
+      <div
+        class="event-modal-item"
+        style="
+          padding:18px;
+          border:1px solid #eee;
+          border-radius:15px;
+          margin-bottom:15px;
+        "
+      >
+
+        <div style="display:flex; gap:15px; align-items:flex-start;">
+
+          <img
+            src="images/chess (4).png"
+            alt="Afro Fest"
+            style="
+              width:90px;
+              height:70px;
+              object-fit:cover;
+              border-radius:10px;
+            "
+          >
+
+          <div>
+
+            <h3 style="margin:0 0 7px;">
+              Afro Fest 2025
+            </h3>
+
+            <p style="margin:3px 0;">
+              📅 Oct 18, 2025
+            </p>
+
+            <p style="margin:3px 0;">
+              📍 Main Auditorium
+            </p>
+
+          </div>
+
+        </div>
+
+        <p style="margin:14px 0 0; line-height:1.6; color:#667085;">
+          <strong>About:</strong>
+          Celebrate African culture through music, dance, food, fashion, and live student performances.
+        </p>
+
+      </div>
+
+
+      <!-- INTER-DEPT SOCCER -->
+
+      <div
+        class="event-modal-item"
+        style="
+          padding:18px;
+          border:1px solid #eee;
+          border-radius:15px;
+          margin-bottom:15px;
+        "
+      >
+
+        <div style="display:flex; gap:15px; align-items:flex-start;">
+
+          <img
+            src="images/chess (3).png"
+            alt="Inter-Dept Soccer"
+            style="
+              width:90px;
+              height:70px;
+              object-fit:cover;
+              border-radius:10px;
+            "
+          >
+
+          <div>
+
+            <h3 style="margin:0 0 7px;">
+              Inter-Dept Soccer
+            </h3>
+
+            <p style="margin:3px 0;">
+              📅 Oct 22, 2025
+            </p>
+
+            <p style="margin:3px 0;">
+              📍 Sports Complex
+            </p>
+
+          </div>
+
+        </div>
+
+        <p style="margin:14px 0 0; line-height:1.6; color:#667085;">
+          <strong>About:</strong>
+          Departments compete in a campus soccer tournament where students represent their teams and battle for the championship.
+        </p>
+
+      </div>
+
+
+      <!-- CAMPUS HACKATHON -->
+
+      <div
+        class="event-modal-item"
+        style="
+          padding:18px;
+          border:1px solid #eee;
+          border-radius:15px;
+          margin-bottom:15px;
+        "
+      >
+
+        <div style="display:flex; gap:15px; align-items:flex-start;">
+
+          <img
+            src="images/chess (2).png"
+            alt="Campus Hackathon"
+            style="
+              width:90px;
+              height:70px;
+              object-fit:cover;
+              border-radius:10px;
+            "
+          >
+
+          <div>
+
+            <h3 style="margin:0 0 7px;">
+              Campus Hackathon
+            </h3>
+
+            <p style="margin:3px 0;">
+              📅 Oct 26, 2025
+            </p>
+
+            <p style="margin:3px 0;">
+              📍 Innovation Lab
+            </p>
+
+          </div>
+
+        </div>
+
+        <p style="margin:14px 0 0; line-height:1.6; color:#667085;">
+          <strong>About:</strong>
+          Students work together to build creative technology projects, solve real-world problems, and compete for the best project.
+        </p>
+
+      </div>
+
+
+      <!-- CAMPUS CHESS OPEN -->
+
+      <div
+        class="event-modal-item"
+        style="
+          padding:18px;
+          border:1px solid #eee;
+          border-radius:15px;
+          margin-bottom:15px;
+        "
+      >
+
+        <div style="display:flex; gap:15px; align-items:flex-start;">
+
+          <img
+            src="images/chess (1).png"
+            alt="Campus Chess Open"
+            style="
+              width:90px;
+              height:70px;
+              object-fit:cover;
+              border-radius:10px;
+            "
+          >
+
+          <div>
+
+            <h3 style="margin:0 0 7px;">
+              Campus Chess Open
+            </h3>
+
+            <p style="margin:3px 0;">
+              📅 Oct 30, 2025
+            </p>
+
+            <p style="margin:3px 0;">
+              📍 Student Centre
+            </p>
+
+          </div>
+
+        </div>
+
+        <p style="margin:14px 0 0; line-height:1.6; color:#667085;">
+          <strong>About:</strong>
+          An open chess competition for students of all skill levels, with players competing through a series of matches.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= CLUBS POPUP ================= -->
+
+  <div
+    id="clubsModal"
+    style="
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.55);
+      z-index:9999;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    "
+  >
+
+    <div
+      style="
+        width:min(650px,100%);
+        max-height:85vh;
+        overflow-y:auto;
+        background:white;
+        border-radius:20px;
+        padding:25px;
+        box-shadow:0 20px 60px rgba(0,0,0,0.25);
+      "
+    >
+
+      <div
+        style="
+          display:flex;
+          align-items:center;
+          justify-content:space-between;
+          margin-bottom:20px;
+        "
+      >
+
+        <div>
+
+          <h2 style="margin:0;">
+            Campus Clubs
+          </h2>
+
+          <p style="margin:5px 0 0; color:#667085;">
+            Discover clubs, meet new people, and get involved on campus.
+          </p>
+
+        </div>
+
+
+        <button
+          id="closeClubs"
+          type="button"
+          style="
+            border:none;
+            background:none;
+            font-size:25px;
+            cursor:pointer;
+          "
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <!-- CODING CLUB -->
+
+      <div
+        class="club-modal-item"
+        style="
+          padding:18px;
+          border:1px solid #eee;
+          border-radius:15px;
+          margin-bottom:15px;
+        "
+      >
+
+        <div style="display:flex; gap:15px; align-items:flex-start;">
+
+          <div
+            style="
+              width:55px;
+              height:55px;
+              border-radius:14px;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              background:#f1f5f9;
+              font-size:25px;
+            "
+          >
+            💻
+          </div>
+
+          <div style="flex:1;">
+
+            <h3 style="margin:0 0 6px;">
+              Coding Club
+            </h3>
+
+            <p style="margin:3px 0; color:#667085;">
+              1.2K members
+            </p>
+
+          </div>
+
+          <button
+            class="join"
+            type="button"
+          >
+            Join
+          </button>
+
+        </div>
+
+        <p style="margin:14px 0 0; line-height:1.6; color:#667085;">
+          <strong>About:</strong>
+          A community for students interested in programming, web development, software projects, coding workshops, and technology.
+        </p>
+
+      </div>
+
+
+      <!-- PHOTOGRAPHY CLUB -->
+
+      <div
+        class="club-modal-item"
+        style="
+          padding:18px;
+          border:1px solid #eee;
+          border-radius:15px;
+          margin-bottom:15px;
+        "
+      >
+
+        <div style="display:flex; gap:15px; align-items:flex-start;">
+
+          <div
+            style="
+              width:55px;
+              height:55px;
+              border-radius:14px;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              background:#f1f5f9;
+              font-size:25px;
+            "
+          >
+            📷
+          </div>
+
+          <div style="flex:1;">
+
+            <h3 style="margin:0 0 6px;">
+              Photography Club
+            </h3>
+
+            <p style="margin:3px 0; color:#667085;">
+              892 members
+            </p>
+
+          </div>
+
+          <button
+            class="join"
+            type="button"
+          >
+            Join
+          </button>
+
+        </div>
+
+        <p style="margin:14px 0 0; line-height:1.6; color:#667085;">
+          <strong>About:</strong>
+          A creative space for students who enjoy photography, photo walks, campus events, editing, and sharing their work.
+        </p>
+
+      </div>
+
+
+      <!-- MUSIC CLUB -->
+
+      <div
+        class="club-modal-item"
+        style="
+          padding:18px;
+          border:1px solid #eee;
+          border-radius:15px;
+          margin-bottom:15px;
+        "
+      >
+
+        <div style="display:flex; gap:15px; align-items:flex-start;">
+
+          <div
+            style="
+              width:55px;
+              height:55px;
+              border-radius:14px;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              background:#f1f5f9;
+              font-size:25px;
+            "
+          >
+            🎵
+          </div>
+
+          <div style="flex:1;">
+
+            <h3 style="margin:0 0 6px;">
+              Music Club
+            </h3>
+
+            <p style="margin:3px 0; color:#667085;">
+              640 members
+            </p>
+
+          </div>
+
+          <button
+            class="join"
+            type="button"
+          >
+            Join
+          </button>
+
+        </div>
+
+        <p style="margin:14px 0 0; line-height:1.6; color:#667085;">
+          <strong>About:</strong>
+          A club for students who love music, singing, instruments, performances, jam sessions, and discovering new artists.
+        </p>
+
+      </div>
+
+
+      <!-- DEBATE SOCIETY -->
+
+      <div
+        class="club-modal-item"
+        style="
+          padding:18px;
+          border:1px solid #eee;
+          border-radius:15px;
+          margin-bottom:15px;
+        "
+      >
+
+        <div style="display:flex; gap:15px; align-items:flex-start;">
+
+          <div
+            style="
+              width:55px;
+              height:55px;
+              border-radius:14px;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              background:#f1f5f9;
+              font-size:25px;
+            "
+          >
+            🗣️
+          </div>
+
+          <div style="flex:1;">
+
+            <h3 style="margin:0 0 6px;">
+              Debate Society
+            </h3>
+
+            <p style="margin:3px 0; color:#667085;">
+              478 members
+            </p>
+
+          </div>
+
+          <button
+            class="join"
+            type="button"
+          >
+            Join
+          </button>
+
+        </div>
+
+        <p style="margin:14px 0 0; line-height:1.6; color:#667085;">
+          <strong>About:</strong>
+          A community where students discuss important topics, improve public speaking, participate in debates, and compete in competitions.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= MESSAGES ================= -->
+  <div class="campus-modal" id="messagesModal" aria-hidden="true">
+    <div class="messages-window" role="dialog" aria-modal="true" aria-labelledby="messagesTitle">
+      <aside class="messages-list-panel">
+        <div class="messages-header">
+          <div>
+            <span class="modal-eyebrow">CAMPUSLY CHAT</span>
+            <h2 id="messagesTitle">Messages</h2>
+            <p>Keep up with your campus conversations.</p>
+          </div>
+          <button class="modal-close" id="closeMessages" type="button" aria-label="Close messages">×</button>
+        </div>
+        <label class="message-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input id="messageSearch" type="search" placeholder="Search conversations..." autocomplete="off">
+        </label>
+        <div class="message-filters">
+          <button class="message-filter active" type="button" data-filter="all">All</button>
+          <button class="message-filter" type="button" data-filter="unread">Unread <span id="unreadFilterCount">3</span></button>
+        </div>
+        <div class="conversation-list" id="conversationList"></div>
+      </aside>
+
+      <section class="chat-panel" id="chatPanel">
+        <div class="chat-empty" id="chatEmpty">
+          <div class="chat-empty-icon"><i class="fa-regular fa-message"></i></div>
+          <h3>Your campus conversations</h3>
+          <p>Select a student to start chatting.</p>
+        </div>
+        <div class="chat-content hidden" id="chatContent">
+          <header class="chat-header">
+            <button class="chat-back" id="chatBack" type="button" aria-label="Back to conversations"><i class="fa-solid fa-arrow-left"></i></button>
+            <div class="chat-person-avatar" id="chatAvatar">A</div>
+            <div class="chat-person-copy">
+              <b id="chatName">Alicia Nair</b>
+              <small id="chatStatus">Online now</small>
+            </div>
+            <button class="chat-profile-btn" id="chatProfileBtn" type="button">View profile</button>
+          </header>
+          <div class="chat-messages" id="chatMessages"></div>
+          <form class="chat-composer" id="chatForm">
+            <input id="chatInput" type="text" maxlength="240" placeholder="Write a message..." autocomplete="off">
+            <button type="submit" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ================= NOTIFICATIONS ================= -->
+  <div class="notification-popover hidden" id="notificationPopover" aria-hidden="true">
+    <div class="notification-head">
+      <div>
+        <span class="modal-eyebrow">CAMPUSLY</span>
+        <h3>Notifications</h3>
+      </div>
+      <button id="markNotificationsRead" type="button">Mark all read</button>
+    </div>
+    <div id="notificationList" class="notification-list">
+      <button class="notification-item unread" type="button" data-notification="message">
+        <span class="notification-icon message"><i class="fa-regular fa-message"></i></span>
+        <span><b>Alicia Nair</b> sent you a message.<small>2 min ago</small></span>
+      </button>
+      <button class="notification-item unread" type="button" data-notification="like">
+        <span class="notification-icon like"><i class="fa-solid fa-heart"></i></span>
+        <span><b>Rahul Mehta</b> liked your post.<small>18 min ago</small></span>
+      </button>
+      <button class="notification-item unread" type="button" data-notification="event">
+        <span class="notification-icon event"><i class="fa-regular fa-calendar"></i></span>
+        <span><b>Campus Hackathon</b> is coming up soon.<small>1 hour ago</small></span>
+      </button>
+      <button class="notification-item" type="button">
+        <span class="notification-icon friend"><i class="fa-solid fa-user-plus"></i></span>
+        <span><b>Arjun Iyer</b> joined your campus network.<small>Yesterday</small></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= PROFILE ================= -->
+  <div class="campus-modal" id="profileModal" aria-hidden="true">
+    <div class="profile-window" role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+      <button class="modal-close profile-close" id="closeProfile" type="button" aria-label="Close profile">×</button>
+      <div class="profile-cover"></div>
+      <div class="profile-main">
+        <div class="profile-avatar-large" id="profileAvatar">B</div>
+        <div class="profile-actions">
+          <button class="secondary-btn" id="messageFromProfile" type="button"><i class="fa-regular fa-message"></i> Message</button>
+          <button class="primary-btn" id="editProfileBtn" type="button"><i class="fa-solid fa-pen"></i> Edit profile</button>
+        </div>
+        <div class="profile-heading">
+          <h2 id="profileTitle">Bandile Dlamini</h2>
+          <span class="profile-handle">@bandile</span>
+          <p id="profileBio">Computer Science student • Building Campusly • Always learning.</p>
+        </div>
+        <div class="profile-meta">
+          <span><i class="fa-solid fa-graduation-cap"></i> Computer Science</span>
+          <span><i class="fa-solid fa-location-dot"></i> Campus community</span>
+        </div>
+        <div class="profile-stats">
+          <div><b id="profilePosts">12</b><small>Posts</small></div>
+          <div><b id="profileFollowers">248</b><small>Connections</small></div>
+          <div><b id="profileFollowing">186</b><small>Following</small></div>
+        </div>
+        <div class="profile-section">
+          <div class="profile-section-title"><h3>About</h3><span>Student profile</span></div>
+          <p id="profileAbout">Interested in technology, campus communities, fitness, and building useful projects with other students.</p>
+        </div>
+        <div class="profile-section">
+          <div class="profile-section-title"><h3>Interests</h3></div>
+          <div class="interest-tags" id="interestTags">
+            <span>Technology</span><span>AI & Data</span><span>Web Development</span><span>Fitness</span>
+          </div>
+        </div>
+        <div class="profile-edit hidden" id="profileEdit">
+          <div class="profile-section-title"><h3>Edit profile</h3></div>
+          <label>Display name<input id="editProfileName" type="text" maxlength="40"></label>
+          <label>Bio<textarea id="editProfileBio" maxlength="140" rows="3"></textarea></label>
+          <div class="edit-actions"><button class="secondary-btn" id="cancelProfileEdit" type="button">Cancel</button><button class="primary-btn" id="saveProfileEdit" type="button">Save changes</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
+```
